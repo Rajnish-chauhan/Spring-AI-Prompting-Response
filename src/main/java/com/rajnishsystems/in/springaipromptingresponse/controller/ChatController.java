@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+//import java.util.List;
 
 @RestController
 @RequestMapping
@@ -23,7 +23,7 @@ public class ChatController {
     }
 
     @GetMapping("/chat")
-    public ResponseEntity<List<Tut>> chat(
+    public ResponseEntity<String> chat(
             @RequestParam(value = "q" ,required = true) String message){
 
         return ResponseEntity.ok(chatService.chat(message));
